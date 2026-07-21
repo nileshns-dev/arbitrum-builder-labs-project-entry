@@ -1,6 +1,6 @@
 # arbitrum-builder-labs-project-entry
 
-An interactive, multi-page web platform designed to explain blockchain concepts, track live market prices, and simulate real-time block generation. Built with a warm, editorial aesthetic utilizing Bookerly typography, custom 3D card flips, and responsive UI components.
+An interactive, multi-page web platform designed to explain blockchain concepts, track live market prices and simulate real-time block generation.
 
 ---
 

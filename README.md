@@ -1,4 +1,4 @@
-# arbitrum-builder-labs-project-entry
+# Arbitrum Builder Labs Project Entry
 
 An interactive, multi-page web platform designed to explain blockchain concepts, track live market prices and simulate real-time block generation.
 

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Block Simulator | Web3 &amp; Blockchain</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/icons/logo.png" alt="Logo" class="logo-img" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="concepts.html">Concepts</a></li>
+          <li><a href="prices.html">Live Prices</a></li>
+          <li><a href="simulator.html" class="active">Block Simulator</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <h1>Blockchain Immutability Simulator</h1>
+      <p>Proof-of-work mining and chain integrity across a 6-block distributed ledger.</p>
+    </div>
+
+    <div class="chain-container">
+      <!-- Block 1 -->
+      <article class="block-card valid" id="b1-card">
+        <span class="status-badge" id="b1-status">Block Valid</span>
+        <h2>Block #1</h2>
+        <div class="form-group">
+          <label>Nonce:</label>
+          <input type="number" id="b1-nonce" value="0" oninput="updateChainUI()" />
+        </div>
+        <div class="form-group">
+          <label>Data:</label>
+          <textarea id="b1-data" rows="2" oninput="updateChainUI()"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Previous Hash:</label>
+          <input type="text" value="0000000000000000000000000000000000000000000000000000000000000000" disabled />
+        </div>
+        <div class="form-group">
+          <label>Hash (Target: Starts with '00'):</label>
+          <input type="text" id="b1-hash" disabled />
+        </div>
+        <button onclick="mineBlock(1)" class="btn">Mine Block 1</button>
+      </article>
+
+      <div class="chain-connector">⛓️</div>
+
+      <!-- Block 2 -->
+      <article class="block-card valid" id="b2-card">
+        <span class="status-badge" id="b2-status">Block Valid</span>
+        <h2>Block #2</h2>
+        <div class="form-group">
+          <label>Nonce:</label>
+          <input type="number" id="b2-nonce" value="0" oninput="updateChainUI()" />
+        </div>
+        <div class="form-group">
+          <label>Data:</label>
+          <textarea id="b2-data" rows="2" oninput="updateChainUI()"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Previous Hash:</label>
+          <input type="text" id="b2-prev" disabled />
+        </div>
+        <div class="form-group">
+          <label>Hash (Target: Starts with '00'):</label>
+          <input type="text" id="b2-hash" disabled />
+        </div>
+        <button onclick="mineBlock(2)" class="btn">Mine Block 2</button>
+      </article>
+
+      <div class="chain-connector">⛓️</div>
+
+      <!-- Block 3 -->
+      <article class="block-card valid" id="b3-card">
+        <span class="status-badge" id="b3-status">Block Valid</span>
+        <h2>Block #3</h2>
+        <div class="form-group">
+          <label>Nonce:</label>
+          <input type="number" id="b3-nonce" value="0" oninput="updateChainUI()" />
+        </div>
+        <div class="form-group">
+          <label>Data:</label>
+          <textarea id="b3-data" rows="2" oninput="updateChainUI()"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Previous Hash:</label>
+          <input type="text" id="b3-prev" disabled />
+        </div>
+        <div class="form-group">
+          <label>Hash (Target: Starts with '00'):</label>
+          <input type="text" id="b3-hash" disabled />
+        </div>
+        <button onclick="mineBlock(3)" class="btn">Mine Block 3</button>
+      </article>
+
+      <div class="chain-connector">⛓️</div>
+
+      <!-- Block 4 -->
+      <article class="block-card valid" id="b4-card">
+        <span class="status-badge" id="b4-status">Block Valid</span>
+        <h2>Block #4</h2>
+        <div class="form-group">
+          <label>Nonce:</label>
+          <input type="number" id="b4-nonce" value="0" oninput="updateChainUI()" />
+        </div>
+        <div class="form-group">
+          <label>Data:</label>
+          <textarea id="b4-data" rows="2" oninput="updateChainUI()"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Previous Hash:</label>
+          <input type="text" id="b4-prev" disabled />
+        </div>
+        <div class="form-group">
+          <label>Hash (Target: Starts with '00'):</label>
+          <input type="text" id="b4-hash" disabled />
+        </div>
+        <button onclick="mineBlock(4)" class="btn">Mine Block 4</button>
+      </article>
+
+      <div class="chain-connector">⛓️</div>
+
+      <!-- Block 5 -->
+      <article class="block-card valid" id="b5-card">
+        <span class="status-badge" id="b5-status">Block Valid</span>
+        <h2>Block #5</h2>
+        <div class="form-group">
+          <label>Nonce:</label>
+          <input type="number" id="b5-nonce" value="0" oninput="updateChainUI()" />
+        </div>
+        <div class="form-group">
+          <label>Data:</label>
+          <textarea id="b5-data" rows="2" oninput="updateChainUI()"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Previous Hash:</label>
+          <input type="text" id="b5-prev" disabled />
+        </div>
+        <div class="form-group">
+          <label>Hash (Target: Starts with '00'):</label>
+          <input type="text" id="b5-hash" disabled />
+        </div>
+        <button onclick="mineBlock(5)" class="btn">Mine Block 5</button>
+      </article>
+
+      <div class="chain-connector">⛓️</div>
+
+      <!-- Block 6 -->
+      <article class="block-card valid" id="b6-card">
+        <span class="status-badge" id="b6-status">Block Valid</span>
+        <h2>Block #6</h2>
+        <div class="form-group">
+          <label>Nonce:</label>
+          <input type="number" id="b6-nonce" value="0" oninput="updateChainUI()" />
+        </div>
+        <div class="form-group">
+          <label>Data:</label>
+          <textarea id="b6-data" rows="2" oninput="updateChainUI()"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Previous Hash:</label>
+          <input type="text" id="b6-prev" disabled />
+        </div>
+        <div class="form-group">
+          <label>Hash (Target: Starts with '00'):</label>
+          <input type="text" id="b6-hash" disabled />
+        </div>
+        <button onclick="mineBlock(6)" class="btn">Mine Block 6</button>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      Built by <strong>Nilesh Nagarajan Suba</strong> |
+      <a href="https://github.com/nileshns-dev" target="_blank">GitHub Profile</a> |
+      Batch: <strong>VGEC Information Technology, First year</strong>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

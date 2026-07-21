@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Prices | Web3 &amp; Blockchain</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/icons/logo.png" alt="Logo" class="logo-img" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="concepts.html">Concepts</a></li>
+          <li><a href="prices.html" class="active">Live Prices</a></li>
+          <li><a href="simulator.html">Block Simulator</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <h1>Crypto Price Dashboard</h1>
+      <p>Real-time market prices and 24-hour trends fetched live from CoinGecko API.</p>
+    </div>
+
+    <div class="dashboard-controls">
+      <span id="api-status" style="font-weight: 600;">Loading prices...</span>
+      <button onclick="fetchCryptoPrices()" class="btn btn-accent">↻ Refresh Data</button>
+    </div>
+
+    <div id="price-cards-container" class="price-grid"></div>
+  </main>
+
+  <footer>
+    <p>Built by <strong>Nilesh Nagarajan Suba</strong> |
+      <a href="https://github.com/nileshns-dev" target="_blank">GitHub Profile</a> |
+      Batch: <strong>VGEC Information Technology, First year</strong>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
